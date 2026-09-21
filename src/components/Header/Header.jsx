@@ -1,14 +1,18 @@
-import "./Footer.css";
+import { Nav } from "../Nav/Nav";
+import { Link } from "react-router-dom";
+import logo from "../../assets/react.svg";
+import "./Header.css";
 
-export const Footer = () => {
+export const Header = () => {
   return (
-    <footer>
-      <nav>
-        <ul className="nav-list">
-          <li>Whatsapp</li>
-          <li>Instagram</li>
-        </ul>
-      </nav>
-    </footer>
+    <header>
+      <div className="logo-container">
+        <Link to={"/"}>
+          <img src={logo} alt="logo reactiva" />
+          <span>Reactiva</span>
+        </Link>
+      </div>
+      <Nav />
+    </header>
   );
 };
